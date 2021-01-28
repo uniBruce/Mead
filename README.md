@@ -1,2 +1,2 @@
 # MEAD: A Large-scale Audio-visual Dataset for Emotional Talking-face Generation [ECCV2020]
-by Kaisiyuan Wang, [Qianyi Wu](https://wuqianyi.top/)
+by Kaisiyuan Wang, [Qianyi Wu](https://wuqianyi.top/), Linsen Song, [Zhuoqian Yang](https://yzhq97.github.io/), [Wayne Wu](https://wywu.github.io/), [Chen Qian](https://scholar.google.com/citations?user=AerkT0YAAAAJ&hl=en), [Ran He](https://scholar.google.com/citations?user=ayrg9AUAAAAJ&hl=en), [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en), [Chen Change Loy](http://personal.ie.cuhk.edu.hk/~ccloy/).
