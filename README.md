@@ -11,7 +11,7 @@ As Mead requires different modules to achieve different functions, thus we seper
 #### Stage 1: Audio-to-Landmarks Module
 ···
 python train.py --config ./config/audio2ldmk.yaml
-```
+···
 #### Stage 2: Neutral-to-Emotion Transformer
 
 #### Stage 3: Refinement Network
@@ -29,4 +29,5 @@ If you find this code useful for your research, please cite our paper:
   journal={arXiv preprint arXiv:2011.02674},
   year={2020}
 }
+···
 ···
