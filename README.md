@@ -9,9 +9,9 @@ This repository is based on Pytorch, so please follow the official instructions 
 ### Training
 As Mead requires different modules to achieve different functions, thus we seperate the training for Mead into three stages.
 #### Stage 1: Audio-to-Landmarks Module
-···
+```
 python train.py --config ./config/audio2ldmk.yaml
-···
+```
 #### Stage 2: Neutral-to-Emotion Transformer
 
 #### Stage 3: Refinement Network
@@ -22,12 +22,11 @@ python train.py --config ./config/audio2ldmk.yaml
 
 ## Citation
 If you find this code useful for your research, please cite our paper:
-···
+```
 @article{zhu2020aot,
   title={AOT: Appearance Optimal Transport Based Identity Swapping for Forgery Detection},
   author={Zhu, Hao and Fu, Chaoyou and Wu, Qianyi and Wu, Wayne and Qian, Chen and He, Ran},
   journal={arXiv preprint arXiv:2011.02674},
   year={2020}
 }
-···
-···
+```
