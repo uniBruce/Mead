@@ -30,10 +30,11 @@ python train.py --config ./config/refinement_network.yaml
 ## Citation
 If you find this code useful for your research, please cite our paper:
 ```
-@article{zhu2020aot,
-  title={AOT: Appearance Optimal Transport Based Identity Swapping for Forgery Detection},
-  author={Zhu, Hao and Fu, Chaoyou and Wu, Qianyi and Wu, Wayne and Qian, Chen and He, Ran},
-  journal={arXiv preprint arXiv:2011.02674},
-  year={2020}
-}
+@inproceedings{kaisiyuan2020mead,
+ author = {Wang, Kaisiyuan and Wu, Qianyi and Song, Linsen and Yang, Zhuoqian and Wu, Wayne and Qian, Chen and He, Ran and Qiao, Yu and Loy, Chen Change},
+ title = {MEAD: A Large-scale Audio-visual Dataset for Emotional Talking-face Generation},
+ booktitle = {ECCV},
+ month = Augest,
+ year = {2020}
+} 
 ```
