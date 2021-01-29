@@ -24,6 +24,13 @@ python train.py --config ./config/neutral2emotion.yaml
 python train.py --config ./config/refinement_network.yaml
 ```
 ### Testing
+1. First, download the [pretrained models]() and put them in models folder.
+2. Run the following command to generate a talking sequence with a specific emotion
+```
+python test.py --
+```
+3. The results are stored in outputs folder. 
+
 
 
 
