@@ -34,14 +34,14 @@ python train.py --config ./config/refinement_network.yaml
 python test.py --
 ```
 You can try different emotions by replacing the number with other integers from 0~7.
->> 0:angry
->> 1:disgust
->> 2:contempt
->> 3:fear
->> 4:happy
->> 5:sad
->> 6:surprised
->> 7:neutral
+- 0:angry
+- 1:disgust
+- 2:contempt
+- 3:fear
+- 4:happy
+- 5:sad
+- 6:surprised
+- 7:neutral
 In addition, you can also try compound emotion by setting up two different emotions at the same time.
 ![image]()
 3. The results are stored in outputs folder. 
