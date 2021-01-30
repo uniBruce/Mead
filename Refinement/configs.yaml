@@ -1,0 +1,51 @@
+# Copyright (C) 2017 NVIDIA Corporation.  All rights reserved.
+# Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+# logger options
+gan_type: lsgan              # if closeset test is set
+image_save_iter: 100        # How often do you want to save generated images
+image_display_num: 1         # How many images do you want to display over one time
+snapshot_save_iter: 100     # How often do you want to save trained models
+log_iter: 100                  # How often do you want to log the training stats
+
+# optimization options
+max_iter: 200000             # maximum number of training iterations
+batch_size: 1                # batch size
+ngpus: 1
+momentum: 0.9                 # momentum
+weight_decay: 0.0001          # weight decay
+beta1: 0.5                  # Adam parameter
+beta2: 0.999                # Adam parameter
+init: kaiming                 # initialization [gaussian/kaiming/xavier/orthogonal]
+lr: 0.001                     # initial learning rate
+lr_policy: step               # learning rate scheduler
+gamma: 0.8                    # how much to decay learning rate
+gan_w: 1
+rec_w: 10
+tv_w: 0.0001
+vgg_w: [1,1,1,1]
+step_size: 20000             # how often to decay learning rate
+
+
+# model options
+trainer: GanimationTrainer           # only combine emotion class one-hot vector
+lstm:
+  node_dim: 60                # dimension of one lstm node output
+  layer_num: 3                # layer number of lstm
+  time_dim: 20               # time step for lstm
+
+# data options
+num_workers: 8                              # number of data loading threads
+crop_size: 384                              # Caffe_Crop size
+root: /home/SENSETIME/wangkaisiyuan/Mead_data                                 # dataset folder location
+flist:
+  video_list: ./lists/video_list.txt
+  landmark_list: ./lists/landmark_list.txt
+  phoneme_list: ./lists/phoneme_list.txt
+audio_load_size: 44100                      # 1 second sliding window(fs = 44100Hz)
+vgg_path: ./vgg16.pth
+unetenc_path: ./Classifier_00081400.pt
+gan_path: ./Gan_00203500.pt
+
+
+

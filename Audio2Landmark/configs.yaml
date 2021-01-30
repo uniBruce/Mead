@@ -1,0 +1,45 @@
+# Copyright (C) 2017 NVIDIA Corporation.  All rights reserved.
+# Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+# logger options
+close_set: True
+snapshot_save_iter: 200       # How often do you want to save trained models
+log_iter: 20                  # How often do you want to log the training stats
+
+# optimization options
+max_iter: 200000              # maximum number of training iterations
+batch_size: 32                # batch size
+momentum: 0.9                 # momentum
+weight_decay: 0.0001          # weight decay
+beta1: 0.5                    # Adam parameter
+beta2: 0.999                  # Adam parameter
+init: kaiming                 # initialization [gaussian/kaiming/xavier/orthogonal]
+lr: 0.001                     # initial learning rate
+lr_policy: step               # learning rate scheduler
+gamma: 0.5                    # how much to decay learning rate
+step_size: 20000              # how often to decay learning rate
+purpose: AT-2                 # attention mode for video emoiton recognition
+
+# model options
+trainer: LipTrainer           #trainer type
+EMCINT:
+  in_channel: 7               # flatten the shape of expression coefficients map 29*7
+  mid_channel: 18             # mid_channel 29*3
+  out_channel: 29             # size of expression coefficients map
+lstm:
+  node_dim: 60                # dimension of one lstm node output
+  layer_num: 3                # layer number of lstm
+  time_dim: 100               # time step for lstm
+
+# data options
+audio_dim: 28                                            # size of mfcc
+pca_dim: 20                                              # size of parameter
+num_workers: 4                                           # number of data loading threads
+root: /home/SENSETIME/wangkaisiyuan/Mead_data   # dataset folder location
+flist:
+  audio_list_test: ./lists/audio_list_test.txt
+  audio_list: ./lists/audio_list.txt
+  parameter_list: ./lists/landmarks.pickle
+  parameter_list_test: ./lists/mouth_ldmk_test.txt
+audio_load_size: 44100                                   # 1 second sliding window(fs = 44100Hz)
+pca_path: ./lists/pca.pickle
