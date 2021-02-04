@@ -5,7 +5,7 @@ This repository is for our ECCV2020 paper [MEAD: A Large-scale Audio-visual Data
 ### Multi-view Emotional Audio-visual Dataset
 To cope with the challenge of realistic and natural emotional talking face genertaion, we build the **Multi-view Emotional Audio-visual Dataset (MEAD)** which is a talking-face video corpus featuring 60 actors and actresses talking with 8 different emotions at 3 different intensity levels. High-quality audio-visual clips are captured at 7 different view angles in a strictly-controlled environment. Together with the dataset, we also release an emotional talking-face generation baseline which enables the manipulation of both emotion and its intensity. For more specific information about the dataset, please refer to [here](https://wywu.github.io/projects/MEAD/MEAD.html).
 
-![image]()
+![image](https://github.com/uniBruce/Mead/blob/master/Figures/mead.png)
 
 ## Installation 
 This repository is based on Pytorch, so please follow the official instructions in [here](https://pytorch.org/). The code is tested under pytorch1.0 and Python 3.6 on Ubuntu 16.04.  
@@ -47,7 +47,7 @@ You can try different emotions by replacing the number with other integers from 
 
 In addition, you can also try compound emotion by setting up two different emotions at the same time.
 
-![image]()
+![image](https://github.com/uniBruce/Mead/blob/master/Figures/compound_emotion.png)
 
 3. The results are stored in outputs folder. 
 
