@@ -1,4 +1,4 @@
-from utils_parallel import prepare_sub_folder,  get_config, save_image, write_image, tensor_to_cv2, dict_unite, page2em
+from utils_parallel import prepare_sub_folder,  get_config, save_image, write_image, tensor_to_cv2, dict_unite
 from data import get_data_loader_list
 import argparse
 from trainer_demo import GanimationTrainer
