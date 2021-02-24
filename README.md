@@ -30,7 +30,7 @@ cd Refinement
 python train.py --config ./config/refinement_network.yaml
 ```
 ### Testing
-1. First, download the [pretrained models]() and put them in models folder.
+1. First, download the [pretrained models](https://drive.google.com/drive/folders/1NgW0pqKU-jawqSi-RXiebUcI1_qj6wxM?usp=sharing) and put them in models folder.
 2. Run the following command to generate a talking sequence with a specific emotion
 ```
 python test.py --
