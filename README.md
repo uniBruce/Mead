@@ -31,7 +31,7 @@ python train.py --config config.yaml
 ```
 ### Testing
 1. First, download the [pretrained models](https://drive.google.com/drive/folders/1NgW0pqKU-jawqSi-RXiebUcI1_qj6wxM?usp=sharing) and put them in models folder.
-2. Second, download the [demo data](https://drive.google.com/file/d/1G0sclW7AHqofyQAZFf6DqH4sTYSR85S9/view?usp=sharing)
+2. Second, download the [demo audio data](https://drive.google.com/file/d/1G0sclW7AHqofyQAZFf6DqH4sTYSR85S9/view?usp=sharing).
 3. Run the following command to generate a talking sequence with a specific emotion
 ```
 cd Refinement
