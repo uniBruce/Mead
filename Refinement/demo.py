@@ -63,7 +63,7 @@ with torch.no_grad():
         sys.stdout.write('\rTest data progress: %08d/%08d' % (id + 1, len(test_loader)))
 
         image_output = (tkfc)
-        em_fc = page2em(em)
+        em_fc = trainer.page2em(em)
         image_dir = os.path.join(image_directory, em_fc)
         if os.path.exists(image_dir):
             pass

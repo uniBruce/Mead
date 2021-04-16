@@ -286,7 +286,7 @@ class DemoTestDataset(data.Dataset):
     def __init__(self, root, flist, transform=None, transform_gray = None, audio_transform = None, preprocess=True, image_loader = default_image_loader, config = None, pickle_loader =default_pickle_loader,
                  landmarklist_reader = default_comparameter_reader, picklelist_reader = default_picklelist_reader, preprocess_tool = preprocess_tool):
         self.root = root
-        self.video_root = os.path.join(self.root, 'Video')
+        self.video_root = os.path.join(self.root, 'Reference')
         self.audio_root = '/MFCC_test'
 
         self.audio_list = flist['audio_list_test']

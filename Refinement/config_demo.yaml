@@ -37,15 +37,12 @@ audio_dim: 97                               # size of phoneme
 exp_dim: 20                                 # size of parameter
 num_workers: 8                              # number of data loading threads
 crop_size: 384                              # Caffe_Crop size
-root: ../baseline/data                                 # dataset folder location
+root: ./lists                                 # dataset folder location
 flist:
-  video_list_test: ./lists/video_list_test.txt
-  landmark_list: ./lists/landmark_list.txt
-  audio_list_test: ./lists/audio_test_all.txt
+  audio_list_test: ./lists/audio_demo.txt
 audio_load_size: 44100                      # 1 second sliding window(fs = 44100Hz)
 vgg_path: ./vgg16.pth
 unetenc_path: ./Classifier_00087700.pt
-gan_path: ./Gan_00080100.pt
 pca_path: ./lists/pca.pickle
 
 
