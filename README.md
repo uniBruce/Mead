@@ -17,17 +17,17 @@ This repository is based on Pytorch, so please follow the official instructions 
 #### Stage 1: Audio-to-Landmarks Module
 ```
 cd Audio2Landmark
-python train.py --config ./config/audio2ldmk.yaml
+python train.py --config config.yaml
 ```
 #### Stage 2: Neutral-to-Emotion Transformer
 ```
 cd Neutral2Emotion
-python train.py --config ./config/neutral2emotion.yaml
+python train.py --config config.yaml
 ```
 #### Stage 3: Refinement Network
 ```
 cd Refinement
-python train.py --config ./config/refinement_network.yaml
+python train.py --config config.yaml
 ```
 ### Testing
 1. First, download the [pretrained models](https://drive.google.com/drive/folders/1NgW0pqKU-jawqSi-RXiebUcI1_qj6wxM?usp=sharing) and put them in models folder.
@@ -35,7 +35,7 @@ python train.py --config ./config/refinement_network.yaml
 3. Run the following command to generate a talking sequence with a specific emotion
 ```
 cd Refinement
-python demo.py --config ./config/demo.yaml
+python demo.py --config config_demo.yaml
 ```
 You can try different emotions by replacing the number with other integers from 0~7.
 - 0:angry
