@@ -31,9 +31,11 @@ python train.py --config ./config/refinement_network.yaml
 ```
 ### Testing
 1. First, download the [pretrained models](https://drive.google.com/drive/folders/1NgW0pqKU-jawqSi-RXiebUcI1_qj6wxM?usp=sharing) and put them in models folder.
-2. Run the following command to generate a talking sequence with a specific emotion
+2. Second, download the [demo data](https://drive.google.com/file/d/1G0sclW7AHqofyQAZFf6DqH4sTYSR85S9/view?usp=sharing)
+3. Run the following command to generate a talking sequence with a specific emotion
 ```
-python test.py --
+cd Refinement
+python demo.py --config ./config/demo.yaml
 ```
 You can try different emotions by replacing the number with other integers from 0~7.
 - 0:angry
