@@ -33,7 +33,7 @@ lstm:
   time_dim: 20               # time step for lstm
 
 # data options
-audio_dim: 97                               # size of phoneme
+audio_dim: 28                               # size of phoneme
 exp_dim: 20                                 # size of parameter
 num_workers: 8                              # number of data loading threads
 crop_size: 384                              # Caffe_Crop size

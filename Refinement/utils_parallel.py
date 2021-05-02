@@ -213,35 +213,27 @@ class Timer:
 
 
 # draw mouth heatmap from landmark coordinates
-def draw_heatmap_from_78_landmark(batchsize, landmarks, width, height):
-    heat_maps = []
+def draw_heatmap_from_78_landmark(landmark, width, height):
+    heatmap = np.zeros((width, height), dtype=np.uint8)
+    #print(landmark)
+
     # draw lines
-    def draw_line(start_idx, end_idx, landmark, heatmap):
+    def draw_line(start_idx, end_idx):
         for pts_idx in range(start_idx, end_idx):
             cv2.line(heatmap, (int(landmark[pts_idx * 2]), int(landmark[pts_idx * 2 + 1])),
                      (int(landmark[pts_idx * 2 + 2]), int(landmark[pts_idx * 2 + 3])), thickness=3, color=255)
-    for i in range(batchsize):
-        heatmap = np.zeros((width, height), dtype=np.uint8)
-        landmark = landmarks[i,:]
-        draw_line(84-84+19, 90-84+19, landmark, heatmap)     # upper outer
-        draw_line(96-84+19, 100-84+19, landmark, heatmap)   # upper inner
-        draw_line(100-84+19, 103-84+19, landmark, heatmap)   # lower inner
-        draw_line(90-84+19, 95-84+19, landmark, heatmap)    # lower outer
-        draw_line(0, 18, landmark, heatmap)    # jaw line
-        cv2.line(heatmap, (int(landmark[(96-84+19) * 2]), int(landmark[(96-84+19) * 2 + 1])),
-                 (int(landmark[(103-84+19) * 2]), int(landmark[(103-84+19) * 2 + 1])), thickness=3, color=255)
-        cv2.line(heatmap, (int(landmark[(84-84+19) * 2]), int(landmark[(84-84+19) * 2 + 1])),
-                 (int(landmark[(95-84+19) * 2]), int(landmark[(95-84+19) * 2 + 1])), thickness=3, color=255)
-        heatmap = cv2.GaussianBlur(heatmap, ksize=(5, 5), sigmaX=1, sigmaY=1)
-        heatmap = torch.FloatTensor(heatmap)
-        heatmap = heatmap.unsqueeze(0).unsqueeze(1)
-        heat_maps.append(heatmap)
 
-    map = heat_maps[0]
-    for i in range(1, batchsize):
-        map = torch.cat((map, heat_maps[i]), dim = 0)
-
-    return map
+    draw_line(84-84+19, 90-84+19)     # upper outer
+    draw_line(96-84+19, 100-84+19)   # upper inner
+    draw_line(100-84+19, 103-84+19)   # lower inner
+    draw_line(90-84+19, 95-84+19)    # lower outer
+    draw_line(0, 18)    # jaw line
+    cv2.line(heatmap, (int(landmark[(96-84+19) * 2]), int(landmark[(96-84+19) * 2 + 1])),
+             (int(landmark[(103-84+19) * 2]), int(landmark[(103-84+19) * 2 + 1])), thickness=3, color=255)
+    cv2.line(heatmap, (int(landmark[(84-84+19) * 2]), int(landmark[(84-84+19) * 2 + 1])),
+             (int(landmark[(95-84+19) * 2]), int(landmark[(95-84+19) * 2 + 1])), thickness=3, color=255)
+    heatmap = cv2.GaussianBlur(heatmap, ksize=(5, 5), sigmaX=1, sigmaY=1)
+    return heatmap
 
 
 def mouth_center(mouth_landmark):
