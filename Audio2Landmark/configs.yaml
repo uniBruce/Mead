@@ -39,7 +39,7 @@ root: /home/SENSETIME/wangkaisiyuan/Mead_data   # dataset folder location
 flist:
   audio_list_test: ./lists/audio_list_test.txt
   audio_list: ./lists/audio_list.txt
-  parameter_list: ./lists/landmarks.pickle
+  parameter_list: ./lists/pca.pickle
   parameter_list_test: ./lists/mouth_ldmk_test.txt
 audio_load_size: 44100                                   # 1 second sliding window(fs = 44100Hz)
 pca_path: ./lists/pca.pickle
