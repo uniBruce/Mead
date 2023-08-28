@@ -58,20 +58,11 @@ In addition, you can also try compound emotion by setting up two different emoti
 ## Citation
 If you find this code useful for your research, please cite our paper:
 ```
-@inproceedings{10.1145/3588432.3591509,
-    author = {Wang, Kaisiyuan and Zhou, Hang and Wu, Qianyi and Tang, Jiaxiang and Xu, Zhiliang and Liang, Borong and Hu, Tianshu and Ding, Errui and Liu, Jingtuo and Liu, Ziwei and Wang, Jingdong},
-    title = {Efficient Video Portrait Reenactment via Grid-Based Codebook},
-    year = {2023},
-    isbn = {9798400701597},
-    publisher = {Association for Computing Machinery},
-    address = {New York, NY, USA},
-    url = {https://doi.org/10.1145/3588432.3591509},
-    doi = {10.1145/3588432.3591509},
-    booktitle = {ACM SIGGRAPH 2023 Conference Proceedings},
-    articleno = {66},
-    numpages = {9},
-    keywords = {Facial Animation, Video Synthesis},
-    location = {Los Angeles, CA, USA},
-    series = {SIGGRAPH '23}
-}
+@inproceedings{kaisiyuan2020mead,
+ author = {Wang, Kaisiyuan and Wu, Qianyi and Song, Linsen and Yang, Zhuoqian and Wu, Wayne and Qian, Chen and He, Ran and Qiao, Yu and Loy, Chen Change},
+ title = {MEAD: A Large-scale Audio-visual Dataset for Emotional Talking-face Generation},
+ booktitle = {ECCV},
+ month = Augest,
+ year = {2020}
+} 
 ```
