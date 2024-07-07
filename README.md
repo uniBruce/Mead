@@ -55,10 +55,6 @@ In addition, you can also try compound emotion by setting up two different emoti
 
 3. The results are stored in outputs folder.
 
-| Wav2Lip | SadTalker |   |   |   |
-|---------|-----------|---|---|---|
-| 8.21    | 2.11      |   |   |   |
-
 ## Citation
 If you find this code useful for your research, please cite our paper:
 ```
